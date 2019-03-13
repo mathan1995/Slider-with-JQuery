@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js no-svg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>jQuery Slider Menu by Mathan Jeya</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link href="css/slider-menu.jquery.css" rel="stylesheet" />
+    <link href="css/slider-menu.theme.jquery.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,600"
+      rel="stylesheet"
+    />
+
+    <style>
+      /**
+ * Demo Styles
+ */
+      body {
+        background-color: #252525;
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+      }
+      h1 {
+        color: #fff;
+        text-align: center;
+        font-weight: 100;
+        margin-bottom: 0;
+      }
+      .container {
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 50px;
+      }
+      .slider {
+        border-radius: 3px;
+        overflow: hidden;
+        background-color: #fff;
+        padding: 5px;
+      }
+      .details,
+      .copyright {
+        color: #fff;
+        font-size: 12px;
+      }
+      .details a,
+      .copyright a {
+        text-decoration: none;
+        color: #00a52b;
+      }
+      .copyright {
+        text-align: center;
+        margin-top: -10px;
+        margin-bottom: 30px;
+      }
+      .copyright a:hover {
+        text-decoration: underline;
+      }
+      .details {
+        padding-left: 15px;
+        margin-top: 30px;
+      }
+      .button {
+        display: block;
+        border-radius: 3px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #00a52b;
+        color: #fff;
+        text-decoration: none;
+        margin-top: 20px;
+        font-size: 14px;
+        transition: background-color 0.2s;
+      }
+      .button:hover {
+        background-color: rgba(0, 165, 43, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container" role="main">
+      <h1>Slider Menu</h1>
+      <p class="copyright">by <a href="#">Mathan Jeya</a></p>
+      <div class="slider">
+        <ul class="my-menu">
+          <li><a href="#">Home</a></li>
+          <li>
+            <a href="#">Blog</a>
+            <ul>
+              <li data-vertical="true">
+                <a href="#">Featured Stories</a>
+                <ul>
+                  <li><a href="#">The Tale of The Slider Menu</a></li>
+                  <li><a href="#">Slider Menu - On Fire!</a></li>
+                  <li><a href="#">Do you slide?!</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#">Tags</a>
+                <ul>
+                  <li><a href="#">Tag 1</a></li>
+                  <li><a href="#">Tag 2</a></li>
+                  <li><a href="#">Tag 3</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#">Categories</a>
+                <ul>
+                  <li><a href="#">Category 1</a></li>
+                  <li><a href="#">Category 2</a></li>
+                  <li><a href="#">Category 3</a></li>
+                  <li><a href="#">Category 4</a></li>
+                  <li><a href="#">Category 5</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li data-vertical="true">
+            <a href="#">About<span>I'm a little&hellip; special!</span></a>
+            <ul>
+              <li><a href="#">Who We Are</a></li>
+              <li><a href="#">What We Do</a></li>
+              <li><a href="#">How to Help</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <!-- .my-menu -->
+      </div>
+      <!-- .slider -->
+      <a href="https://github.com/mathan1995" target="_blank" class="button"
+        >Fork on GitHub</a
+      >
+      <ul class="details">
+        <li>Easy-to-use &amp; light-weight at only 1.88KB!</li>
+        <li>Fast &amp; smooth featuring CSS3 animations</li>
+        <li>Responsive with optional theme (shown above)</li>
+        <li>Works with any HTML list</li>
+        <li>Tested in Chrome 56, FF 51, Safari 10, IE 10</li>
+        <li>
+          Meets
+          <a href="https://www.w3.org/WAI/tutorials/menus/" target="_blank"
+            >Web Accessibility</a
+          >
+          guidelines
+        </li>
+        <li>Semantic markup for enhanced SEO</li>
+      </ul>
+    </main>
+    <!-- .container -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slider-menu.jquery.min.js"></script>
+
+    <script>
+      (function($) {
+        $(function() {
+          $(".my-menu").sliderMenu();
+        });
+      })(jQuery);
+    </script>
+  </body>
+</html>

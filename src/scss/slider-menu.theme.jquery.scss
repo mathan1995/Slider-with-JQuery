@@ -1,0 +1,177 @@
+// jQuery Slider Menu Theme Styles
+
+@import 'compass';
+
+$primary-color:   #00a52b !default;
+$secondary-color: #252525 !default;
+$bg-color:        #fff    !default;
+
+.slider-menu {
+  background-color: $bg-color;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  li {
+    border-bottom: 1px solid rgba($secondary-color, .1);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  a {
+    color: $secondary-color;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: all .2s;
+
+    span {
+      color: $primary-color;
+      display: inline-block;
+      font-size: .8em;
+      font-weight: normal;
+      margin-left: 5px;
+      text-transform: none;
+      transition: color .2s;
+      vertical-align: middle;
+
+
+      &::before {
+        content: '- ';
+      }
+    }
+
+    &:hover,
+    &:active {
+      color: $bg-color;
+
+      span {
+        color: $bg-color;
+      }
+    }
+
+    &:hover {
+      background-color: $primary-color;
+    }
+
+    &:active {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+.slider-menu-back {
+  background-color: rgba($primary-color, .05);
+  color: $secondary-color;
+  font-weight: 300;
+  padding-bottom: 13px;
+  padding-top: 12px;
+  transition: color .2s;
+
+  span {
+    @include rotate(180deg);
+    background-color: rgba($secondary-color, .3);
+    color: transparent;
+    display: block;
+    height: 16px;
+    -moz-mask-image: url('../img/arrow.svg');
+    -webkit-mask-image: url('../img/arrow.svg');
+    mask-image: url('../img/arrow.svg');
+    -moz-mask-size: cover;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    text-indent: -9999px;
+    width: 16px;
+  }
+
+  &:hover {
+    span {
+      background-color: $bg-color;
+    }
+  }
+}
+
+.slider-menu-children > a {
+  &::before {
+    background-color: $secondary-color;
+    content: '';
+    display: block;
+    float: right;
+    height: 12px;
+    margin-top: 4px;
+    -moz-mask-image: url('../img/arrow.svg');
+    -webkit-mask-image: url('../img/arrow.svg');
+    mask-image: url('../img/arrow.svg');
+    -moz-mask-size: cover;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    transition: transform .2s, margin-top .2s;
+    width: 12px;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $bg-color;
+    }
+  }
+}
+
+[data-vertical="true"] {
+  ul {
+    background-color: rgba($primary-color, .05);
+
+    a {
+      color: $primary-color;
+      font-size: 12px;
+      font-weight: 300;
+      text-transform: none;
+
+      &:hover {
+        color: $bg-color;
+      }
+    }
+  }
+
+  li {
+    border-color: rgba($primary-color, .1);
+  }
+
+  &.slider-menu-children {
+    > a {
+      &::before {
+        @include rotate(90deg);
+        margin-top: 6px;
+      }
+
+      &.slider-menu-open {
+        background-color: $primary-color;
+        color: $bg-color;
+
+        &::before {
+          @include rotate(270deg);
+          background-color: $bg-color;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix() {
+  .slider-menu-children > a::before,
+  .slider-menu-children > a:hover::before,
+  [data-vertical="true"].slider-menu-children > a.slider-menu-open::before,
+  .slider-menu-back span,
+  .slider-menu-back:hover span {
+    background-color: transparent;
+    background-repeat: no-repeat;
+  }
+
+  .slider-menu-children > a::before,
+  .slider-menu-back span {
+    background-image: url('../img/arrow.svg');
+  }
+}
+

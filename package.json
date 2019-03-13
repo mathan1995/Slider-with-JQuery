@@ -1,0 +1,59 @@
+{
+  "name": "slider-menu",
+  "title": "jQuery Slider Menu",
+  "description": "Tired of those standard click ‘n drop menus? Need something with a little more pazazz? Yes & yes! Here’s the answer to your prayers, the jQuery Slider Menu.",
+  "keywords": [
+    "jquery",
+    "jquery-plugin",
+    "frontend",
+    "frontend-web",
+    "frontend-developer",
+    "menu",
+    "menu-navigation",
+    "ecosystem:jquery"
+  ],
+  "version": "1.2.1",
+  "author": {
+    "name": "Ben Marshall",
+    "url": "https://benmarshall.me"
+  },
+  "maintainers": [
+    {
+      "name": "Ben Marshall",
+      "email": "me@benmarshall.me",
+      "url": "https://benmarshall.me"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://choosealicense.com/licenses/mit/"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/bmarshall511/slider-menu.jquery.js/issues",
+    "email": "me@benmarshall.me"
+  },
+  "homepage": "https://bmarshall511.github.io/slider-menu.jquery.js/",
+  "repository": "https://github.com/bmarshall511/slider-menu.jquery.js",
+  "dependencies": {
+    "jquery": ">=3.0.0"
+  },
+  "devDependencies": {
+    "compass-options": "^0.1.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-compass": "^2.1.0",
+    "gulp-complexity": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^2.1.2",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "uglify": "^0.1.5"
+  }
+}
